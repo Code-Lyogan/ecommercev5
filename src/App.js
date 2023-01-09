@@ -7,8 +7,10 @@ import Contact from './components/Contact';
 import ImageSlider from './components/Slider';
 import { SliderData } from './components/SliderData';
 import './components/Slider.css';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 import Form from './components/Form';
+import LowToHigh from "./components/LowHi";
+import HighToLow from "./components/HiLow";
 
 const App = () => {
     return(
@@ -19,18 +21,20 @@ const App = () => {
                     <Route path='/' element = {<Home />} exact>
                         <Home />
                         <ImageSlider slides={SliderData} />
-                        <Footer />
                     </Route>
                     <Route path='/products' element = {<Products />} exact>
                         <Products />
-                        <Footer />
+                    </Route>
+                    <Route path="/products/HighToLow" element={<HighToLow />} exact>
+                    </Route>
+                    <Route path="/products/LowToHigh" element={<LowToHigh />} exact>
                     </Route>
                     <Route path='/contact' element = {<Contact />} exact>
                         <Contact />
                         <Form />
-                        <Footer />
                     </Route>
                 </Switch>
+                <Footer />
             </Router>
         </>
     )

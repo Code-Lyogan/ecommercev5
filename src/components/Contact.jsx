@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Text component at the top of Contact page
 const Contact = () => {
     return(
         <section className='hero'>

@@ -112,3 +112,85 @@ button {
         line-height: 2;
     }
 }
+
+/* CSS for Product Cards */
+
+.prod {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .products {
+    text-align: center;
+    border: solid 3px gold;
+    width: 600px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .img {
+    width: 55%;
+    height: auto;
+  }
+  
+  .device {
+    font-weight: bold;
+    margin: 20px;
+  }
+  
+  .price {
+    margin-top: 15px;
+  }
+  
+  .full-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+  }
+  
+  .prod-container {
+    display: flex;
+  }
+  
+  .linkContain {
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  h4 {
+    margin-left: 10px;
+  }
+  
+  .prod-container button {
+    background: orange;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    transition: 0.3s;
+    color: #fff;
+    margin-left: 20px;
+    width: 100px;
+  }
+  
+  .prod-container button:hover {
+    background: #131313;
+    color: orange;
+  }
+  
+  .navLink {
+    border-radius: 10px;
+    margin-left: 20px;
+    color: #fff;
+    background: orange;
+    text-decoration: none;
+    font-size: large;
+    padding: 5px;
+  }
+  
+  .navLink:hover {
+    background: orange;
+    color: black;
+  }

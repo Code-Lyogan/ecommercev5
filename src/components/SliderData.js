@@ -1,3 +1,5 @@
+// This is the content data used for the slider images on the home page.
+
 export const SliderData = [
     {
         image: 'https://images.unsplash.com/photo-1621478374422-35206faeddfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGFuaW1lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
