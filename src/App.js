@@ -25,9 +25,9 @@ const App = () => {
                     <Route path='/products' element = {<Products />} exact>
                         <Products />
                     </Route>
-                    <Route path="/products/HighToLow" element={<HighToLow />} exact>
+                    <Route path="/products/HightoLow" element={<HighToLow />} exact>
                     </Route>
-                    <Route path="/products/LowToHigh" element={<LowToHigh />} exact>
+                    <Route path="/products/LowtoHigh" element={<LowToHigh />} exact>
                     </Route>
                     <Route path='/contact' element = {<Contact />} exact>
                         <Contact />
