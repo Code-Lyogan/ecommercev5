@@ -26,7 +26,7 @@ const FormSignup = ({ submitForm }) => {
                 </div>
                 <div className='form-inputs'>
                     <label htmlFor='message' className='form-label'>Message</label>
-                    <input id='message' type='textarea' name='message' className='form-input' placeholder='Enter your username...' value={values.message} onChange={handleChange}/>
+                    <input id='message' type='textarea' name='message' className='form-input' placeholder='Send us a message...' value={values.message} onChange={handleChange}/>
                     {errors.message && <p>{errors.message}</p>}
                 </div>
                 <button className='form-input-btn' type='submit'>Submit</button>
