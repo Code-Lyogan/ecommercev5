@@ -37,47 +37,26 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/Products", (req, res) => {
+app.get("/products", (req, res) => {
   const sql = "SELECT * FROM items";
   api.query(sql, (err, results) => {
     res.send(results);
   });
 });
 
-// app.get("/Monitor", (req, res) => {
-//   const sql = "SELECT * FROM items WHERE category = 'monitor'";
-//   api.query(sql, (err, results) => {
-//     handleQueryResult(err, results, res);
-//   });
-// });
+app.get("/products/LowtoHigh", (req, res) => {
+  const sql = "SELECT * FROM items ORDER BY price ASC";
+  api.query(sql, (err, results) => {
+    handleQueryResult(err, results, res);
+  });
+});
 
-// app.get("/Desktop", (req, res) => {
-//   const sql = "SELECT * FROM items WHERE category = 'desktop'";
-//   api.query(sql, (err, results) => {
-//     handleQueryResult(err, results, res);
-//   });
-// });
-
-// app.get("/Keyboard", (req, res) => {
-//   const sql = "SELECT * FROM items WHERE category = 'keyboard'";
-//   api.query(sql, (err, results) => {
-//     handleQueryResult(err, results, res);
-//   });
-// });
-
-// app.get("/Products/LowtoHigh", (req, res) => {
-//   const sql = "SELECT * FROM items ORDER BY price ASC";
-//   api.query(sql, (err, results) => {
-//     handleQueryResult(err, results, res);
-//   });
-// });
-
-// app.get("/Products/HightoLow", (req, res) => {
-//   const sql = "SELECT * FROM items ORDER BY price DESC";
-//   api.query(sql, (err, results) => {
-//     handleQueryResult(err, results, res);
-//   });
-// });
+app.get("/products/HightoLow", (req, res) => {
+  const sql = "SELECT * FROM items ORDER BY price DESC";
+  api.query(sql, (err, results) => {
+    handleQueryResult(err, results, res);
+  });
+});
 
 app.use(express.static("assets"));
 app.use(express.static(path.join(__dirname, "build")));
