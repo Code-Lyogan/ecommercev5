@@ -80,10 +80,10 @@ app.get("/Products", (req, res) => {
 // });
 
 app.use(express.static("assets"));
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, '..','client', "build")));
 app.get("*", (req, res) => {
   try {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
+    res.sendFile(path.join(__dirname, '..','client','public', "index.html"));
   } catch (error) {
     console.error(error);
     res.status(500).send("Internal server error");
