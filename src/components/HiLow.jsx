@@ -39,13 +39,13 @@ export default class Productlist extends React.Component {
           </div>
           <div className="linkContain">
             <h4>Sort By: </h4>
-            <Link className="navLink" to="/Products/LowtoHigh">
+            <Link className="navLink" to="/products/LowtoHigh">
               Price: Low - High
             </Link>
-            <Link className="navLink" to="/Products/HightoLow">
+            <Link className="navLink" to="/products/HightoLow">
               Price: High - Low
             </Link>
-            <Link className="navLink" to="/Products">
+            <Link className="navLink" to="/products">
               Reset
             </Link>
           </div>
